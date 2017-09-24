@@ -110,7 +110,7 @@ IF "%UNINSTALL%" == "-u" (
 	ECHO.        displayMath: [['\$\$', '\$\$'], ['\\\\\\\\[', '\\\\\\\\]']],
 	ECHO.        element: 'msgs_div',
 	ECHO.        ignoreClass: 'ql-editor',
-	ECHO.        inlineMath: [['\$', '\$'], ['\\\\\\\\(', '\\\\\\\\)']],
+	ECHO.        inlineMath: [['\$', '\$'], ['\\\\\\\\(', '\\\\\\\\^)']],
 	ECHO.        processEscapes: true,
 	ECHO.        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
 	ECHO.      },
