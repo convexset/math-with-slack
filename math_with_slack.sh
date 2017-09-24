@@ -18,7 +18,7 @@
 
 ## Constants
 
-MWS_VERSION="v0.2.2"
+MWS_VERSION="v0.2.2_Patch"
 
 
 ## Functions
@@ -133,21 +133,21 @@ document.addEventListener('DOMContentLoaded', function() {
       extensions: ['tex2jax.js'],
       jax: ['input/TeX', 'output/HTML-CSS'],
       tex2jax: {
-        displayMath: [['\$\$', '\$\$']],
+        displayMath: [['\$\$', '\$\$'], ['\\\\\\\\[', '\\\\\\\\]']],
         element: 'msgs_div',
         ignoreClass: 'ql-editor',
-        inlineMath: [['\$', '\$']],
+        inlineMath: [['\$', '\$'], ['\\\\\\\\(', '\\\\\\\\)']],
         processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       },
       TeX: {
-        extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']
+        extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js', 'bbox.js', 'cancel.js', 'color.js', 'enclose.js', 'HTML.js', 'unicode.js', 'https://cdn.mathjax.org/mathjax/contrib/xyjax/xypic.js']
       }
     });
   \`;
   var mathjax_script = document.createElement('script');
   mathjax_script.type = 'text/javascript';
-  mathjax_script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js';
+  mathjax_script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js';
   document.head.appendChild(mathjax_config);
   document.head.appendChild(mathjax_script);
 

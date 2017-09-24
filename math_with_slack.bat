@@ -18,7 +18,7 @@
 
 :: Constants
 
-SET "MWS_VERSION=v0.2.2"
+SET "MWS_VERSION=v0.2.2_Patch"
 
 
 :: User input
@@ -107,21 +107,21 @@ IF "%UNINSTALL%" == "-u" (
 	ECHO.      extensions: ['tex2jax.js'],
 	ECHO.      jax: ['input/TeX', 'output/HTML-CSS'],
 	ECHO.      tex2jax: {
-	ECHO.        displayMath: [['\$\$', '\$\$']],
+	ECHO.        displayMath: [['\$\$', '\$\$'], ['\\\\\\\\[', '\\\\\\\\]']],
 	ECHO.        element: 'msgs_div',
 	ECHO.        ignoreClass: 'ql-editor',
-	ECHO.        inlineMath: [['\$', '\$']],
+	ECHO.        inlineMath: [['\$', '\$'], ['\\\\\\\\(', '\\\\\\\\)']],
 	ECHO.        processEscapes: true,
 	ECHO.        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
 	ECHO.      },
 	ECHO.      TeX: {
-	ECHO.        extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']
+	ECHO.        extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js', 'bbox.js', 'cancel.js', 'color.js', 'enclose.js', 'HTML.js', 'unicode.js', 'https://cdn.mathjax.org/mathjax/contrib/xyjax/xypic.js']
 	ECHO.      }
 	ECHO.    }^);
 	ECHO.  `;
 	ECHO.  var mathjax_script = document.createElement('script'^);
 	ECHO.  mathjax_script.type = 'text/javascript';
-	ECHO.  mathjax_script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js';
+	ECHO.  mathjax_script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js';
 	ECHO.  document.head.appendChild(mathjax_config^);
 	ECHO.  document.head.appendChild(mathjax_script^);
 	ECHO.
